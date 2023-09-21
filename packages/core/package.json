@@ -1,13 +1,13 @@
 {
   "name": "@bearbear-cli/core",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "core package",
   "author": "AshtarteKk <865189421@qq.com>",
   "homepage": "",
   "license": "ISC",
   "main": "lib/core.js",
-  "bin":{
-    "bear":"bin/index.js"
+  "bin": {
+    "bear": "bin/index.js"
   },
   "directories": {
     "lib": "lib",
