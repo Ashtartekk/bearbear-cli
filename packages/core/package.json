@@ -24,5 +24,6 @@
   },
   "dependencies": {
     "@bearbear-cli/utils": "../../utils"
-  }
+  },
+  "gitHead": "11115ab9261c4e05456df6464690ec01ab794e1c"
 }
