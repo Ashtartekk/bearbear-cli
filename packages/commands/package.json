@@ -1,7 +1,7 @@
 {
   "name": "@bearbear-cli/commands",
   "version": "1.0.4",
-  "description": "> TODO: description",
+  "description": "commands package",
   "author": "AshtarteKk <865189421@qq.com>",
   "homepage": "https://github.com/Ashtartekk/bearbear-cli#readme",
   "license": "ISC",
