@@ -23,7 +23,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@bearbear-cli/utils": "../../utils"
+    "@bearbear-cli/utils": "../../utils",
+    "import-local": "^3.1.0"
   },
   "gitHead": "11115ab9261c4e05456df6464690ec01ab794e1c"
 }
