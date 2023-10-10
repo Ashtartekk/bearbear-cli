@@ -3,8 +3,10 @@
 const importLocal = require('import-local')
 const lib = require('../lib/core.js')
 
+console.log(__filename)
+
 if(importLocal(__filename)){
-    require('npmlog').info('bear','正在使用 bear cli 本地版本')
+    require('npmlog').info('Bear','正在使用 bear cli 本地版本')
 }else{
     lib(process.argv.slice(2))
 }
