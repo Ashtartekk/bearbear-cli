@@ -5,7 +5,7 @@
   "author": "AshtarteKk <865189421@qq.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/core.js",
+  "main": "lib/index.js",
   "bin": {
     "bear": "bin/index.js"
   },

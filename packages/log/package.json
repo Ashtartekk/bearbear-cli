@@ -1,0 +1,35 @@
+{
+  "name": "@bearbear-cli/log",
+  "version": "1.0.7",
+  "description": "bear-cli log package",
+  "keywords": [
+    "log"
+  ],
+  "author": "AshtarteKk <865189421@qq.com>",
+  "homepage": "https://github.com/Ashtartekk/bearbear-cli#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashtartekk/bearbear-cli.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/@bearbear-cli/log.test.js"
+  },
+  "dependencies": {
+    "npmlog": "^7.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/Ashtartekk/bearbear-cli/issues"
+  }
+}
