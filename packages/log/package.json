@@ -27,6 +27,7 @@
     "test": "node ./__tests__/@bearbear-cli/log.test.js"
   },
   "dependencies": {
+    "dayjs": "^1.11.10",
     "npmlog": "^7.0.1"
   },
   "bugs": {
