@@ -24,8 +24,12 @@
   },
   "dependencies": {
     "@bearbear-cli/log": "^1.0.9",
+    "colors": "^1.4.0",
     "import-local": "^3.1.0",
     "npmlog": "^7.0.1"
   },
-  "gitHead": "11115ab9261c4e05456df6464690ec01ab794e1c"
+  "gitHead": "11115ab9261c4e05456df6464690ec01ab794e1c",
+  "devDependencies": {
+    "semver": "^7.5.4"
+  }
 }

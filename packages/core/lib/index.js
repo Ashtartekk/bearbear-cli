@@ -2,21 +2,39 @@
 
 module.exports = core;
 
+const semver = require('semver')
 const pkg = require('../package.json')
 const constant = require('./const')
+const log = require("@bearbear-cli/log")
 
 function core() {
-  return {
-    cliVersion:CheckPackageVersion(),
-    nodeVersion:checkNodeVersion()}
+  // checkNodeVersion()
+  if (checkNodeVersion()) {
+    return {
+      cliVersion: CheckPackageVersion(),
+      nodeVersion: currentNodeVersion()
+    }
+  } else {
+    return
+  }
 }
 
-function CheckPackageVersion(){
+function CheckPackageVersion() {
   return pkg.version
 }
 
-function checkNodeVersion(){
-  //第一步 获取当前Node版本号
+function currentNodeVersion() {
   const currentVersion = process.version
   return currentVersion
+}
+
+function checkNodeVersion() {
+  const currentVersion = process.version
+  const lowestVersion = constant.LOWEST_NODE_VERSION
+  if (!semver.gte(currentVersion, lowestVersion)) {
+    log('ERROR', `需要安装 v${lowestVersion} 以上版本的 Node.js`)
+    return false
+  } else {
+    return true
+  }
 }
