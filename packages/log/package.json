@@ -1,6 +1,6 @@
 {
   "name": "@bearbear-cli/log",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "bear-cli log package",
   "keywords": [
     "log"
