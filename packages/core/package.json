@@ -1,6 +1,6 @@
 {
   "name": "@bearbear-cli/core",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "core package",
   "author": "AshtarteKk <865189421@qq.com>",
   "homepage": "",
@@ -23,7 +23,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@bearbear-cli/log":"1.0.8",
+    "@bearbear-cli/log": "^1.0.9",
     "import-local": "^3.1.0",
     "npmlog": "^7.0.1"
   },
