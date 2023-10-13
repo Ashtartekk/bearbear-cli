@@ -1,15 +1,29 @@
 'use strict';
 
-module.exports = {core,checkUserHome,checkInputArgs};
-
+module.exports = {core,checkUserHome,checkInputArgs,checkEnv};
+const path = require('path')
 const semver = require('semver')
 const pkg = require('../package.json')
 const constant = require('./const')
 const log = require("../../log")
 const userHome = require('user-home')
 const pathExists = require('path-exists').sync
-let args;
+let args,config;
 checkInputArgs()
+function checkEnv(){
+  const dotenv = require('dotenv')
+  const dotenvPath = path.resolve(userHome,'.env')
+  if(pathExists(dotenvPath)){
+    config = dotenv.config({
+      path:dotenvPath
+    })
+    log(`${process.env.LOG_LEVEL}`, `环境变量${config.parsed.CLI_HOME}`)
+    log(`${process.env.LOG_LEVEL}`, `DB账号${config.parsed.DB_USER}`)
+    log(`${process.env.LOG_LEVEL}`, `DB密码${config.parsed.DB_PWD}`)
+  }
+}
+
+
 function checkArgs(){
   if(args.debug){
     process.env.LOG_LEVEL = 'DEBUG';
