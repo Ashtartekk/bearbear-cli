@@ -32,12 +32,12 @@ async function checkGlobalUpdate (){
   // 2.调用npm API 获取所有版本号
   const {getNpmSemverVersion} = require('../../utils/lib')
   const latestVersion = await getNpmSemverVersion(currentVersion,npmName)
+    // 3.提取所有版本号，比对哪些版本号是大于当前版本号的
   if(latestVersion && semver.gt(latestVersion,currentVersion)){
-    log(`请手动更新${npmName} | 当前版本：${currentVersion} | 最新版本：${latestVersion} | `,'WARN')
-    log(`更新命令： npm install -g ${npmName}`,'WARN')
+      // 4.获取最新的版本号，提示用户更新到该版本
+    log(`更新提示：请手动更新${npmName} | 当前版本：${currentVersion} | 最新版本：${latestVersion} | `,'WARN')
+    log(`更新命令：npm install -g ${npmName}`,'WARN')
   }
-  // 3.提取所有版本号，比对哪些版本号是大于当前版本号的
-  // 4.获取最新的版本号，提示用户更新到该版本
 }
 
 function cureateDefaultConfig() {
